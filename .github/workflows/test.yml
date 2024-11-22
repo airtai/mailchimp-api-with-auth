@@ -47,3 +47,4 @@ jobs:
         run: pytest
         env:
           CONTEXT: ${{ runner.os }}-py${{ matrix.python-version }}
+          MAILCHIMP_API_KEY: "test-key" # pragma: allowlist secret

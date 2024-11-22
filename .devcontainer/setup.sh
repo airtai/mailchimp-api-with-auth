@@ -18,3 +18,9 @@ if [ -z "$OPENAI_API_KEY" ]; then
     echo -e "\033[33mWarning: OPENAI_API_KEY environment variable is not set.\033[0m"
     echo
 fi
+# check MAILCHIMP_API_KEY environment variable is set
+if [ -z "$MAILCHIMP_API_KEY" ]; then
+    echo
+    echo -e "\033[33mWarning: MAILCHIMP_API_KEY environment variable is not set.\033[0m"
+    echo
+fi

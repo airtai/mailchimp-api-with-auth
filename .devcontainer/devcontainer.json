@@ -4,7 +4,6 @@
         "./docker-compose.yml"
     ],
     "service": "python-3.11-mailchimp_api",
-
     "secrets": {
         "OPENAI_API_KEY": {
             "description": "This key is optional and only needed if you are working on OpenAI-related code. Leave it blank if not required. You can always set it later as an environment variable in the codespace terminal."
@@ -14,6 +13,9 @@
         },
         "ANTHROPIC_API_KEY": {
             "description": "This key is optional and only needed if you are working with Anthropic API-related code. Leave it blank if not required. You can always set it later as an environment variable in the codespace terminal."
+        },
+        "MAILCHIMP_API_KEY": {
+            "description": "This key is optional and only needed if you are working with Mailchimp API-related code. Leave it blank if not required. You can always set it later as an environment variable in the codespace terminal."
         }
     },
     "shutdownAction": "stopCompose",

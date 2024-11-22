@@ -9,6 +9,9 @@ name = "mailchimp_api"
 
 dependencies = [
     "fastagency[autogen,mesop,server,fastapi,basic_auth]>=0.3.0",
+    "python-multipart>=0.0.17",
+    "pandas>=2.2.3",
+    "tenacity>=9.0.0",
 ]
 
 [project.optional-dependencies]
@@ -24,8 +27,8 @@ lint = [
     "types-ujson",
     "types-Pygments",
     "types-docutils",
-    "mypy==1.12.1",
-    "ruff==0.7.2",
+    "mypy==1.13.0",
+    "ruff==0.7.4",
     "pyupgrade-directories==0.3.0",
     "bandit==1.7.10",
     "semgrep==1.95.0",

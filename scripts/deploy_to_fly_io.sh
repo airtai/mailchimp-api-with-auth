@@ -21,3 +21,4 @@ flyctl deploy --config fly.toml --yes
 
 echo -e "\033[0;32mSetting secrets\033[0m"
 flyctl secrets set OPENAI_API_KEY=$OPENAI_API_KEY
+flyctl secrets set MAILCHIMP_API_KEY=$MAILCHIMP_API_KEY
