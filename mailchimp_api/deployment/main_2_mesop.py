@@ -9,13 +9,10 @@ provider = FastAPIAdapter.create_provider(
     fastapi_url=fastapi_url,
 )
 auth = BasicAuth(
-    # TODO: Replace `allowed_users` with the desired usernames and their
     # bcrypt-hashed passwords. One way to generate bcrypt-hashed passwords
     # is by using online tools such as https://bcrypt.online
-    # Default password for all users is `password`
     allowed_users={
-        "admin": "$2y$10$ZgcGQlsvMoMRmmW4Y.nUVuVHc.vOJsOA7iXAPXWPFy9DX2S7oeTDa",  # nosemgrep: generic.secrets.security.detected-bcrypt-hash.detected-bcrypt-hash
-        "user@example.com": "$2y$10$ZgcGQlsvMoMRmmW4Y.nUVuVHc.vOJsOA7iXAPXWPFy9DX2S7oeTDa",  # nosemgrep: generic.secrets.security.detected-bcrypt-hash.detected-bcrypt-hash
+        "robert@airt.ai": "$2y$10$zmsptxWMVGs8aTPxRiMArO23anNZLxL4l5w71S7yvMpxCG4gJTZWS",  # nosemgrep: generic.secrets.security.detected-bcrypt-hash.detected-bcrypt-hash
     },
 )
 
