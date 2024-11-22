@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  # nosemgrep: yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service
+  python-3.11-mailchimp_api:
+    image: mcr.microsoft.com/devcontainers/python:3.11
+    container_name: mailchimp_api-${USER}-python-3.11
+    volumes:
+      - ../:/workspaces/mailchimp_api:cached
+    command: sleep infinity
+
+    env_file:
+      - ./devcontainer.env
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - mailchimp_api-network
+
+networks:
+  mailchimp_api-network:
+    name: mailchimp_api-${USER}-network
