@@ -46,7 +46,7 @@ for ((i=1; i<$WORKERS+1; i++))
 do
 	PORT=$((FASTAPI_PORT + i))
     echo "Starting fastapi uvicorn on port $PORT"
-    uvicorn my_fastagency_app.deployment.main_1_fastapi:app --workers=1 --host 0.0.0.0 --port $PORT > /dev/stdout 2>&1 &
+    uvicorn mailchimp_api.deployment.main_1_fastapi:app --workers=1 --host 0.0.0.0 --port $PORT > /dev/stdout 2>&1 &
 done
 
 
@@ -56,7 +56,7 @@ for ((i=1; i<$WORKERS+1; i++))
 do
 	PORT=$((MESOP_PORT + i))
     echo "Starting gunicorn on port $PORT"
-    gunicorn --workers=1 my_fastagency_app.deployment.main_2_mesop:app --bind 0.0.0.0:$PORT > /dev/stdout 2>&1 &
+    gunicorn --workers=1 mailchimp_api.deployment.main_2_mesop:app --bind 0.0.0.0:$PORT > /dev/stdout 2>&1 &
 done
 
 # Wait for all background processes
